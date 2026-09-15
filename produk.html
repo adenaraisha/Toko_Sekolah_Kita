@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toko Online Sekolah — Products Section (Bagian Siswa B)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#16324A;
+    --mustard:#C98B2E;
+    --cream:#F6F3EC;
+    --ink:#20242A;
+    --line:#DCD5C6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+  }
+
+  /* ===== NAVBAR — bagian Siswa A, ditampilkan sebagai konteks ===== */
+  .navbar{
+    background:var(--navy);
+    color:#fff;
+    padding:20px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .navbar .brand{
+    font-family:'Fraunces', serif;
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:0.2px;
+  }
+  .navbar nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:28px;
+    font-size:15px;
+    opacity:0.85;
+  }
+
+  /* ===== PRODUCTS SECTION — TUGAS SISWA B DIMULAI ===== */
+  .products{
+    padding:64px 6% 72px;
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .products-header{
+    max-width:520px;
+    margin-bottom:40px;
+  }
+  .products-header .eyebrow{
+    font-size:14px;
+    color:var(--mustard);
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .products-header h2{
+    font-family:'Fraunces', serif;
+    font-size:34px;
+    font-weight:600;
+    line-height:1.2;
+    margin:0 0 10px;
+    color:var(--navy);
+  }
+  .products-header p{
+    font-size:15.5px;
+    line-height:1.6;
+    color:#4A4F57;
+    margin:0;
+  }
+
+  .product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+    gap:28px;
+  }
+  .product-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .product-thumb{
+    aspect-ratio:4/3;
+    background:linear-gradient(135deg, #EADFC5, #D7C79A);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Fraunces', serif;
+    font-size:15px;
+    color:var(--navy);
+  }
+  .product-info{
+    padding:18px 18px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    flex:1;
+  }
+  .product-tag{
+    font-size:12px;
+    color:var(--mustard);
+    font-weight:600;
+  }
+  .product-name{
+    font-size:16.5px;
+    font-weight:600;
+    color:var(--ink);
+    margin:0;
+  }
+  .product-price{
+    margin-top:auto;
+    padding-top:10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .product-price span{
+    font-family:'Fraunces', serif;
+    font-size:18px;
+    color:var(--navy);
+  }
+  .product-price button{
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    padding:9px 16px;
+    border-radius:6px;
+    font-size:13.5px;
+    font-weight:500;
+    cursor:pointer;
+  }
+  .product-price button:hover{
+    background:#0F2333;
+  }
+  /* ===== TUGAS SISWA B SELESAI ===== */
+
+  /* ===== FOOTER — bagian Siswa C, ditampilkan sebagai konteks ===== */
+  .footer{
+    background:var(--navy);
+    color:#cbd3da;
+    padding:28px 6%;
+    text-align:center;
+    font-size:13.5px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Bagian Siswa A -->
+  <header class="navbar">
+    <div class="brand">Toko Sekolah Kita</div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Produk</a>
+      <a href="#">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- ===================== BAGIAN SISWA B DIMULAI ===================== -->
+  <section class="products" id="produk">
+    <div class="products-header">
+      <div class="eyebrow">Produk Pilihan</div>
+      <h2>Perlengkapan sekolah, langsung dari koperasi kita</h2>
+      <p>Semua barang dijamin asli dan hasil penjualannya kembali untuk kegiatan siswa.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-thumb">Foto Produk</div>
+        <div class="product-info">
+          <span class="product-tag">Seragam</span>
+          <p class="product-name">Kemeja Putih Lengan Pendek</p>
+          <div class="product-price">
+            <span>Rp75.000</span>
+            <button>Tambah</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">Foto Produk</div>
+        <div class="product-info">
+          <span class="product-tag">Alat Tulis</span>
+          <p class="product-name">Paket Buku Tulis Isi 10</p>
+          <div class="product-price">
+            <span>Rp32.000</span>
+            <button>Tambah</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">Foto Produk</div>
+        <div class="product-info">
+          <span class="product-tag">Aksesori</span>
+          <p class="product-name">Dasi Sekolah Motif Logo</p>
+          <div class="product-price">
+            <span>Rp20.000</span>
+            <button>Tambah</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">Foto Produk</div>
+        <div class="product-info">
+          <span class="product-tag">Tas</span>
+          <p class="product-name">Tas Ransel Logo Sekolah</p>
+          <div class="product-price">
+            <span>Rp150.000</span>
+            <button>Tambah</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ===================== BAGIAN SISWA B SELESAI ===================== -->
+
+  <!-- Bagian Siswa C -->
+  <footer class="footer">
+    &copy; 2026 Toko Online Sekolah Kita. Semua hak dilindungi.
+  </footer>
+
+</body>
+</html>
