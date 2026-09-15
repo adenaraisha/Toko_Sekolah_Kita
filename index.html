@@ -1,1 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Sekolah Kita - Perlengkapan Sekolah Premium</title>
+    <style>
+        /* =================================================== */
+        /* GENERAL STYLES & VARIABLES                          */
+        /* =================================================== */
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary-color: #f97316;
+            --secondary-hover: #ea580c;
+            --text-color: #1f2937;
+            --text-light: #4b5563;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* =================================================== */
+        /* CSS UTAMA: HEADER & TENTANG (Tugas Siswa A)        */
+        /* =================================================== */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1d4ed8 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-card p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        /* =================================================== */
+        /* CSS FITUR: PRODUK GRID (Tugas Siswa B)             */
+        /* =================================================== */
+        .produk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .produk-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .produk-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .produk-info {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .produk-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .produk-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .harga {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .btn-beli {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transition);
+        }
+
+        .btn-beli:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* =================================================== */
+        /* CSS FITUR: KONTAK & FOOTER (Tugas Siswa C)          */
+        /* =================================================== */
+        footer {
+            background-color: #0f172a;
+            color: #f1f5f9;
+            padding: 60px 0 20px 0;
+            margin-top: 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-info h3, .footer-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            position: relative;
+        }
+
+        .footer-info p {
+            margin-bottom: 12px;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            color: var(--white);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background-color: #0f172a;
+        }
+
+        .btn-kirim {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transition);
+        }
+
+        .btn-kirim:hover {
+            background-color: var(--secondary-hover);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =================================================== -->
+    <!-- BAGIAN 1: KODE UTAMA (Siswa A / Ketua Tim)          -->
+    <!-- =================================================== -->
+    <header>
+        <div class="container">
+            <h1>Toko Sekolah Kita</h1>
+            <p>Menyediakan segala kebutuhan dan perlengkapan sekolah terbaik, berkualitas, dan terlengkap.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="tentang">
+            <h2 class="section-title">Tentang Toko Kami</h2>
+            <div class="about-card">
+                <p>Selamat datang di Toko Sekolah Kita! Kami adalah platform resmi terintegrasi yang didesain khusus untuk mempermudah seluruh siswa, guru, dan wali murid dalam mendapatkan atribut sekolah resmi, alat tulis esensial, hingga seragam sekolah berstandar tinggi dengan harga yang bersahabat.</p>
+            </div>
+        </section>
+
+        <!-- =================================================== -->
+        <!-- BAGIAN 2: FITUR PRODUK (Siswa B)                     -->
+        <!-- =================================================== -->
+        <section id="produk">
+            <h2 class="section-title">Produk Pilihan Kami</h2>
+            <div class="produk-grid">
+                <!-- Produk Item 1 -->
+                <div class="produk-card">
+                    <div class="produk-info">
+                        <h3>Seragam Sekolah Lengkap</h3>
+                        <p>Bahan katun premium pilihan, adem, menyerap keringat, dan sangat nyaman dipakai seharian di kelas.</p>
+                        <div class="harga">Rp 125.000</div>
+                        <button class="btn-beli">Beli Sekarang</button>
+                    </div>
+                </div>
+                <!-- Produk Item 2 -->
+                <div class="produk-card">
+                    <div class="produk-info">
+                        <h3>Tas Ransel Anti Air</h3>
+                        <p>Dibuat dengan bahan kanvas cordura waterproof. Kapasitas besar, kuat menahan beban buku cetak yang berat.</p>
+                        <div class="harga">Rp 85.000</div>
+                        <button class="btn-beli">Beli Sekarang</button>
+                    </div>
+                </div>
+                <!-- Produk Item 3 -->
+                <div class="produk-card">
+                    <div class="produk-info">
+                        <h3>Paket Alat Tulis Hemat</h3>
+                        <p>Bundling lengkap siap pakai: isi 3 buku tulis tebal, 2 pulpen jel, 1 pensil 2B, penghapus, dan penggaris akrilik.</p>
+                        <div class="harga">Rp 25.000</div>
+                        <button class="btn-beli">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =================================================== -->
 
