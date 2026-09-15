@@ -23,6 +23,11 @@
             --transition: all 0.3s ease;
         }
 
+        /* Membuat pergerakan scroll halaman menjadi halus saat tombol diklik */
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -43,7 +48,7 @@
         }
 
         section {
-            padding: 60px 0;
+            padding: 80px 0 40px 0; /* Memberi ruang agar scroll tidak terpotong */
         }
 
         .section-title {
@@ -65,7 +70,7 @@
         }
 
         /* =================================================== */
-        /* CSS UTAMA: HEADER & TENTANG (Tugas Siswa A)        */
+        /* CSS UTAMA: HEADER, NAVIGASI & TENTANG (Siswa A)     */
         /* =================================================== */
         header {
             background: linear-gradient(135deg, var(--primary-color) 0%, #1d4ed8 100%);
@@ -86,7 +91,46 @@
             font-size: 1.2rem;
             opacity: 0.9;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Gaya Tombol Navigasi Penghubung Fitur */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .btn-nav {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-nav-produk {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .btn-nav-produk:hover {
+            background-color: #f1f5f9;
+            transform: translateY(-2px);
+        }
+
+        .btn-nav-kontak {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .btn-nav-kontak:hover {
+            background-color: var(--secondary-hover);
+            transform: translateY(-2px);
         }
 
         .about-card {
@@ -179,7 +223,7 @@
             background-color: #0f172a;
             color: #f1f5f9;
             padding: 60px 0 20px 0;
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
         .footer-grid {
@@ -258,6 +302,12 @@
         <div class="container">
             <h1>Toko Sekolah Kita</h1>
             <p>Menyediakan segala kebutuhan dan perlengkapan sekolah terbaik, berkualitas, dan terlengkap.</p>
+            
+            <!-- Tombol Navigasi Penghubung yang Ditambahkan -->
+            <div class="nav-buttons">
+                <a href="#produk" class="btn-nav btn-nav-produk">Lihat Produk Pilihan</a>
+                <a href="#kontak" class="btn-nav btn-nav-kontak">Hubungi Kontak Kami</a>
+            </div>
         </div>
     </header>
 
@@ -272,39 +322,7 @@
         <!-- =================================================== -->
         <!-- BAGIAN 2: FITUR PRODUK (Siswa B)                     -->
         <!-- =================================================== -->
+        <!-- ID "produk" digunakan sebagai jangkar (anchor) tombol navigasi -->
         <section id="produk">
             <h2 class="section-title">Produk Pilihan Kami</h2>
             <div class="produk-grid">
-                <!-- Produk Item 1 -->
-                <div class="produk-card">
-                    <div class="produk-info">
-                        <h3>Seragam Sekolah Lengkap</h3>
-                        <p>Bahan katun premium pilihan, adem, menyerap keringat, dan sangat nyaman dipakai seharian di kelas.</p>
-                        <div class="harga">Rp 125.000</div>
-                        <button class="btn-beli">Beli Sekarang</button>
-                    </div>
-                </div>
-                <!-- Produk Item 2 -->
-                <div class="produk-card">
-                    <div class="produk-info">
-                        <h3>Tas Ransel Anti Air</h3>
-                        <p>Dibuat dengan bahan kanvas cordura waterproof. Kapasitas besar, kuat menahan beban buku cetak yang berat.</p>
-                        <div class="harga">Rp 85.000</div>
-                        <button class="btn-beli">Beli Sekarang</button>
-                    </div>
-                </div>
-                <!-- Produk Item 3 -->
-                <div class="produk-card">
-                    <div class="produk-info">
-                        <h3>Paket Alat Tulis Hemat</h3>
-                        <p>Bundling lengkap siap pakai: isi 3 buku tulis tebal, 2 pulpen jel, 1 pensil 2B, penghapus, dan penggaris akrilik.</p>
-                        <div class="harga">Rp 25.000</div>
-                        <button class="btn-beli">Beli Sekarang</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- =================================================== -->
-
